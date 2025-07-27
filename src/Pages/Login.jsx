@@ -18,9 +18,9 @@ const Login = () => {
               <div>
                 <Link className='text-base label hover:text-blue-500'>Forgot password?</Link>
               </div>
-              <button className="btn btn-neutral block mx-auto w-full text-center text-base font-normal mt-4">Login</button>
+              <button className="btn bg-blue-500 text-white block mx-auto w-full text-center text-base font-normal mt-4">Login</button>
             </form>
-            <p className='text-base'>Already have an account? <Link className='text-base hover:text-blue-500'>Register</Link></p>
+            <p className='text-base'>Dont' have an account? <Link to="/register" className='text-base hover:text-blue-500'>Register</Link></p>
           </div>
         </div>
       </div>
