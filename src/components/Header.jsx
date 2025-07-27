@@ -47,6 +47,12 @@ const Header = () => {
           Auth Mohamilon
         </Link>
       </div>
+      <div className="navbar-center">
+        {/* Desktop menu */}
+        <div className="hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">{links}</ul>
+        </div>
+      </div>
       <div className="navbar-end">
         {/* Mobile dropdown */}
         <div className="dropdown dropdown-end lg:hidden">
@@ -74,10 +80,9 @@ const Header = () => {
           </ul>
         </div>
 
-        {/* Desktop menu */}
-        <div className="hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
-        </div>
+        <button className="btn bg-blue-500 text-white rounded-xl">
+          Button
+        </button>
       </div>
     </div>
   );
