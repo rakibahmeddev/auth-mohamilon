@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import AuthProvider, { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Header = () => {
+
+  const {name} = useContext(AuthContext)
+  console.log(name)
+
   const links = (
     <>
       <NavLink
@@ -81,7 +86,7 @@ const Header = () => {
         </div>
 
         <button className="btn bg-blue-500 text-white rounded-xl">
-          Button
+          {name}
         </button>
       </div>
     </div>
