@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
   const links = (
@@ -38,9 +38,14 @@ const Header = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100  border border-blue-500 rounded-2xl my-6">
       <div className="navbar-start">
-        <a className="btn btn-ghost text-xl">Auth Mohamilon</a>
+        <Link
+          to="/"
+          className=" mx-4 py-2 px-4 rounded-xl hover:bg-blue-500 hover:text-white text-xl"
+        >
+          Auth Mohamilon
+        </Link>
       </div>
       <div className="navbar-end">
         {/* Mobile dropdown */}
