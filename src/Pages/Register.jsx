@@ -2,6 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
+
+  const handleRegister = e => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    console.log(name, email, password)
+
+  }
+
   return (
     <div className="flex justify-center items-center">
       <div className=" flex-col">
@@ -10,12 +21,17 @@ const Register = () => {
         </div>
         <div className="card bg-base-100 w-full mt-2 max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">
-            <form className="">
+            <form onSubmit={handleRegister} className="">
+              <label className="label text-base">Name</label>
+              <input type="text" name="name" className="input mb-4" placeholder="Name" />
+
               <label className="label text-base">Email</label>
-              <input type="email" className="input mb-4" placeholder="Email" />
+              <input type="email" name="email" className="input mb-4" placeholder="Email" />
+
               <label className="label text-base">Password</label>
               <input
                 type="password"
+                name="password"
                 className="input mb-4"
                 placeholder="Password"
               />
