@@ -4,8 +4,8 @@ import AuthProvider, { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Header = () => {
 
-  const {name} = useContext(AuthContext)
-  console.log(name)
+  const { user} = useContext(AuthContext)
+  console.log(user?.email)
 
   const links = (
     <>
@@ -86,7 +86,7 @@ const Header = () => {
         </div>
 
         <button className="btn bg-blue-500 text-white rounded-xl">
-          {name}
+          {user?.email}
         </button>
       </div>
     </div>
