@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
 
-  const handleRegister = e => {
+  const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    console.log(name, email, password)
+    console.log(name, email, password);
 
-  }
+    // create user
+    createUser(email, password)
+      .then((result) => {
+        console.log('user created', result.user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
 
   return (
     <div className="flex justify-center items-center">
@@ -23,10 +33,20 @@ const Register = () => {
           <div className="card-body">
             <form onSubmit={handleRegister} className="">
               <label className="label text-base">Name</label>
-              <input type="text" name="name" className="input mb-4" placeholder="Name" />
+              <input
+                type="text"
+                name="name"
+                className="input mb-4"
+                placeholder="Name"
+              />
 
               <label className="label text-base">Email</label>
-              <input type="email" name="email" className="input mb-4" placeholder="Email" />
+              <input
+                type="email"
+                name="email"
+                className="input mb-4"
+                placeholder="Email"
+              />
 
               <label className="label text-base">Password</label>
               <input
