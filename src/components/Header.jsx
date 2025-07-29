@@ -38,6 +38,16 @@ const Header = () => {
       >
         Register
       </NavLink>
+      <NavLink
+        to="/orders"
+        className={({ isActive }) =>
+          `text-base mx-4 hover:text-blue-500 ${
+            isActive ? 'text-blue-700 font-semibold' : 'text-black'
+          }`
+        }
+      >
+        Orders
+      </NavLink>
     </>
   );
 
@@ -79,7 +89,11 @@ const Header = () => {
 
         {/* Mobile dropdown */}
         <div className="dropdown dropdown-end lg:hidden">
-          <div tabIndex={0} role="button" className="btn bg-white border-0 px-3 py-2 hover:bg-blue-500 hover:text-white ml-2 rounded-xl">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn bg-white border-0 px-3 py-2 hover:bg-blue-500 hover:text-white ml-2 rounded-xl"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
