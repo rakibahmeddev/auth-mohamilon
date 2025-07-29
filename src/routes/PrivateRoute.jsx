@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import { Navigate } from 'react-router-dom';
 
-const PrivateRoute = () => {
+const PrivateRoute = ({ children }) => {
+  const { user } = useContext(AuthContext);
+
+  if (user) {
+    return children;
+  }
+
   return (
     <div>
-      <h2>this is private route</h2>
+      <p className="text-center text-red-500 mt-4">
+        You must be logged in to view this page.
+      </p>
     </div>
   );
 };
