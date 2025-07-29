@@ -38,16 +38,18 @@ const Header = () => {
       >
         Register
       </NavLink>
-      <NavLink
-        to="/orders"
-        className={({ isActive }) =>
-          `text-base mx-4 hover:text-blue-500 ${
-            isActive ? 'text-blue-700 font-semibold' : 'text-black'
-          }`
-        }
-      >
-        Orders
-      </NavLink>
+      {user && (
+        <NavLink
+          to="/orders"
+          className={({ isActive }) =>
+            `text-base mx-4 hover:text-blue-500 ${
+              isActive ? 'text-blue-700 font-semibold' : 'text-black'
+            }`
+          }
+        >
+          Orders
+        </NavLink>
+      )}
     </>
   );
 
