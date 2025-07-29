@@ -4,6 +4,7 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -18,6 +19,7 @@ const Register = () => {
       .then((result) => {
         console.log('user created', result.user);
         e.target.reset();
+        navigate('/login');
       })
       .catch((error) => {
         console.log(error.message);
