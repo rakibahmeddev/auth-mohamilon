@@ -3,9 +3,8 @@ import { Link, NavLink } from 'react-router-dom';
 import AuthProvider, { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Header = () => {
-
-  const { user} = useContext(AuthContext)
-  console.log(user?.email)
+  const { user, signOutUser } = useContext(AuthContext);
+  console.log(user?.email);
 
   const links = (
     <>
@@ -59,9 +58,28 @@ const Header = () => {
         </div>
       </div>
       <div className="navbar-end">
+        {/* button  */}
+        <div>
+          {user ? (
+            <div className="flex items-center gap-4">
+              <p>{user?.email}</p>
+              <button
+                onClick={signOutUser}
+                className="btn bg-blue-500 text-white rounded-xl"
+              >
+                Log Out
+              </button>
+            </div>
+          ) : (
+            <Link to="/login" className="btn bg-blue-500 text-white rounded-xl">
+              Login
+            </Link>
+          )}
+        </div>
+
         {/* Mobile dropdown */}
         <div className="dropdown dropdown-end lg:hidden">
-          <div tabIndex={0} role="button" className="btn btn-ghost">
+          <div tabIndex={0} role="button" className="btn bg-white border-0 px-3 py-2 hover:bg-blue-500 hover:text-white ml-2 rounded-xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -79,15 +97,11 @@ const Header = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-10 p-4 shadow bg-base-100 rounded-box w-52 text-right"
           >
             {links}
           </ul>
         </div>
-
-        <button className="btn bg-blue-500 text-white rounded-xl">
-          {user?.email}
-        </button>
       </div>
     </div>
   );
