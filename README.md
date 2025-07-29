@@ -1,12 +1,43 @@
-# React + Vite
+# 🔐 Rakib Auth - Mohamilon
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Note:** This is a **practice project** built to explore React authentication using Firebase, Tailwind, and modern frontend tools.
 
-Currently, two official plugins are available:
+A modern authentication app built with React, Firebase, and Tailwind-based UI libraries. It includes registration, login, logout, and protected routes, with global auth state managed using Context API and Firebase hooks.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🔗 [rakib-auth-mohamilon.surge.sh](https://rakib-auth-mohamilon.surge.sh)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧰 Tech Stack
+
+- ⚛️ **React** – JavaScript UI library
+- 🔥 **Firebase Auth** – Authentication with email/password
+- 🪝 **React Firebase Hooks** – Easy Firebase integration with React
+- 🌐 **React Router DOM** – SPA routing & protected navigation
+- 🌀 **TailwindCSS** – Utility-first CSS framework
+- 🎨 **DaisyUI** – Ready-to-use Tailwind components
+- 💎 **Preline UI** – Extra UI components with Tailwind
+- ⚙️ **Context API** – Auth state management
+- 🧠 **React Hooks** – useState, useEffect, useContext
+- 🛡️ **Private Route** – Auth-based route protection
+- ☁️ **Surge** – Static site deployment
+
+---
+
+## ✨ Features
+
+- 🔐 User Registration (Email/Password)
+- 🔑 User Login and Logout
+- 🛡️ Private Routes for logged-in users
+- 🔄 Persistent login state using Context API + Firebase Hooks
+- ✅ Form validation and error handling
+- ⚛️ Modern, component-based structure
+- 🎨 Clean UI with TailwindCSS, DaisyUI, and Preline
+- ⚡ Fast and responsive experience
+- 🌍 Live on Surge
+
+---
+
+#
